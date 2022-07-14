@@ -9,7 +9,7 @@ using ALL_ClassLibrary;
 
 namespace THE_THREE_CASES
 {
-    internal class LoginMenu
+    public class LoginMenu
     {
         public void RunPasswordMenu()
         {
@@ -18,8 +18,12 @@ namespace THE_THREE_CASES
 
             PasswordLogic Password = new PasswordLogic();
             PasswordLogic PasswordLogic = new PasswordLogic();
-
-
+            Main_menu main = new Main_menu();
+            PasswordLogic f = new PasswordLogic();
+            PasswordLogic Tjek = new PasswordLogic();
+            int F = 2;
+           
+ 
             bool Continue = false;
 
             while (Continue == false)
@@ -47,6 +51,7 @@ namespace THE_THREE_CASES
 
 
                 Console.Clear();
+
                 if (choice == "1")
                 {
                     Console.SetCursorPosition(45, 7);
@@ -59,6 +64,15 @@ namespace THE_THREE_CASES
                     Console.SetCursorPosition(45, 12);
                     Console.Write("Password: ");
                     string password = Console.ReadLine();
+                    File.WriteAllText(brugernavnFilepath, user);
+                    File.WriteAllText(adgangskodeFilepath, password);
+
+                   
+
+
+
+                    main.Menu();
+
 
                 }
                 if (choice == "2")
@@ -73,11 +87,18 @@ namespace THE_THREE_CASES
                     Console.SetCursorPosition(45, 12);
                     Console.Write("Password: ");
                     string password = Console.ReadLine();
+                    File.WriteAllText(brugernavnFilepath, user);
+                    File.WriteAllText(adgangskodeFilepath, password);
 
-                    PasswordLogic f = new PasswordLogic();
-                    var d = f.PasswordRequiremnts(password, user);
 
-                    if (d == "")
+             
+
+                    main.Menu();
+
+
+
+
+                    if (F == 2)
                     {
                         Console.SetCursorPosition(45, 20);
                         Console.WriteLine("Welcome " + user + " " + "you have created a new account");
@@ -98,17 +119,13 @@ namespace THE_THREE_CASES
                         Console.Clear();
 
 
+                       
+                      
+                            //Main_menu main = new Main_menu();
+                            //main.Menu();
+                        
 
                        
-                        d = f.PasswordRequiremnts(password,user);
-
-
-
-
-
-                        Main_menu main = new Main_menu();
-                            main.Menu();
-
                         
 
 
@@ -124,7 +141,7 @@ namespace THE_THREE_CASES
                     }
                     else
                     {
-                        Console.WriteLine($"{d}");
+                        Console.WriteLine($"{f}");
                     }
                 }
 
