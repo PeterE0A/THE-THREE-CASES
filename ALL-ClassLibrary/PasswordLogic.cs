@@ -11,67 +11,74 @@ namespace ALL_ClassLibrary
 {
     public class PasswordLogic
     {
-        //StringBuilder sb = new StringBuilder();
-        ////public string Password;
-        ////public string UserName;
-        //public string passwordrequiremnts(string Password, string UserName)
-        //{
-        //    TjekHvisDetAlleredeEksisterer(Password, UserName);
-        //    passwordrequiremnts(Password, UserName);
+        StringBuilder sb = new StringBuilder();
+        public string Password;
+        public string UserName;
+        public string passwordrequiremnts()
+        {
+            //    TjekHvisDetAlleredeEksisterer(Password, UserName);
+            //    passwordrequiremnts(Password, UserName);
 
 
-        //    //    //Main_menu main_menu = new Main_menu();
-        //    //    //Password = password;
-        //    //    //UserName = user;
+            //    //    //Main_menu main_menu = new Main_menu();
+            
 
-        //    //    //int minLength = 12;
+            Password = sb.ToString();
+            UserName = sb.ToString();   
 
-
-        //    //    //bool containsAtLeastOneUppercase = password.Any(char.IsUpper);
-        //    //    //bool containsAtLeastOneLowercase = password.Any(char.IsLower);
-        //    //    //string specialChars = "!@#$%^&*()-_+=\\/':,{}[]~.";
-        //    //    //string space = ("  ");
-
-        //    //    //PasswordLengthandothers();
-        //    //    //TjekHvisDetAlleredeEksisterer();
+            //    //    //int minLength = 12;
 
 
-        //    return sb.ToString();
+            //    //    //bool containsAtLeastOneUppercase = password.Any(char.IsUpper);
+            //    //    //bool containsAtLeastOneLowercase = password.Any(char.IsLower);
+            //    //    //string specialChars = "!@#$%^&*()-_+=\\/':,{}[]~.";
+            //    //    //string space = ("  ");
+            TjekHvisDetAlleredeEksisterer();
+            PasswordLengthandothers();
+
+
+            return sb.ToString();
 
 
 
-        //    //    //if (password.Length < minLength)
-        //    //    //{
-        //    //    //    Console.SetCursorPosition(45, 16);
-        //    //    //    Console.Write("Password should have minimum 12 characters!");
+            //    //    //if (password.Length < minLength)
+            //    //    //{
+            //    //    //    Console.SetCursorPosition(45, 16);
+            //    //    //    Console.Write("Password should have minimum 12 characters!");
 
-        //    //    //}
-        //    //    //else if (containsAtLeastOneLowercase != containsAtLeastOneUppercase)
-        //    //    //{
-        //    //    //    Console.SetCursorPosition(45, 16);
-        //    //    //    Console.Write("Password should have atleast one Upper and Lower Case Character!");
+            //    //    //}
+            //    //    //else if (containsAtLeastOneLowercase != containsAtLeastOneUppercase)
+            //    //    //{
+            //    //    //    Console.SetCursorPosition(45, 16);
+            //    //    //    Console.Write("Password should have atleast one Upper and Lower Case Character!");
 
-        //    //    //}
-        //    //    //else if (!Contains(password, specialChars))
-        //    //    //{
-        //    //    //    Console.SetCursorPosition(45, 16);
-        //    //    //    Console.Write("Password should have atleast one Special Character!");
+            //    //    //}
+            //    //    //else if (!Contains(password, specialChars))
+            //    //    //{
+            //    //    //    Console.SetCursorPosition(45, 16);
+            //    //    //    Console.Write("Password should have atleast one Special Character!");
 
-        //    //    //}
-        //    //    //else if (Contains(password, space))
-        //    //    //{
-        //    //    //    Console.SetCursorPosition(45, 16);
-        //    //    //    Console.Write("Password should not have any Spaces!");
+            //    //    //}
+            //    //    //else if (Contains(password, space))
+            //    //    //{
+            //    //    //    Console.SetCursorPosition(45, 16);
+            //    //    //    Console.Write("Password should not have any Spaces!");
 
-        //    //    //}
+            //    //    //}
 
-        //    //    //else
-        //    //    //{
-        //    //    //    //var obj2 = new Main_menu();
-        //    //    //    //obj2.
+            //    //    //else
+            //    //    //{
+            //    //    //    //var obj2 = new Main_menu();
+            //    //    //    //obj2.
 
-        //    //    //}
-        public void TjekHvisDetAlleredeEksisterer(string password, string user)
+            //    //    //}
+
+
+
+        }
+
+
+       private void TjekHvisDetAlleredeEksisterer()
         {
 
 
@@ -79,7 +86,7 @@ namespace ALL_ClassLibrary
             string filepath = @"C:\SkrivBord\Brugernavn.txt";
             string check = File.ReadAllText(filepath);
 
-            if (check.Contains(user))
+            if (check.Contains(UserName))
             {
 
                 Console.SetCursorPosition(45, 20);
@@ -87,7 +94,7 @@ namespace ALL_ClassLibrary
 
 
             }
-            else if (check.Contains(password))
+            else if (check.Contains(Password))
             {
                 Console.SetCursorPosition(45, 20);
                 Console.Write("Password Exits!");
@@ -95,18 +102,18 @@ namespace ALL_ClassLibrary
 
         }
 
-        public void PasswordLengthandothers(string password, string user)
+        public void PasswordLengthandothers()
         {
 
 
-            bool containsAtLeastOneUppercase = password.Any(char.IsUpper);
-            bool containsAtLeastOneLowercase = password.Any(char.IsLower);
+            bool containsAtLeastOneUppercase = Password.Any(char.IsUpper);
+            bool containsAtLeastOneLowercase = Password.Any(char.IsLower);
             string specialChars = "!@#$%^&*()-_+=\\/':,{}[]~.";
             string space = ("  ");
             int minLength = 12;
 
 
-            if (password.Length < minLength)
+            if (Password.Length < minLength)
             {
                 Console.SetCursorPosition(45, 16);
                 Console.Write("Password Should have minimum 12 characters!");
@@ -119,13 +126,13 @@ namespace ALL_ClassLibrary
                 Console.Write("Password should have atleast one Upper and Lower Case Character!");
 
             }
-            else if (!Contains(password, specialChars))
+            else if (!Contains(Password, specialChars))
             {
                 Console.SetCursorPosition(45, 16);
                 Console.Write("Password should have atleast one Special Character!");
 
             }
-            else if (Contains(password, space))
+            else if (Contains(Password, space))
             {
                 Console.SetCursorPosition(45, 16);
                 Console.Write("Password should not have any Spaces!");
@@ -142,86 +149,13 @@ namespace ALL_ClassLibrary
         }
 
 
+
+
+
+
+
+
+
     }
-
-
-    //public void TjekHvisDetAlleredeEksisterer(string Password, string UserName)
-    //    {
-            
-
-
-    //        string filepath = @"C:\SkrivBord\Brugernavn.txt";
-    //        string check = File.ReadAllText(filepath);
-
-    //        if (check.Contains(UserName))
-    //        {
-
-    //            Console.SetCursorPosition(45, 20);
-    //            Console.WriteLine("User Name Exits!");
-               
-                
-    //        }
-    //        else if (check.Contains(Password))
-    //        {
-    //            Console.SetCursorPosition(45, 20);
-    //            Console.Write("Password Exits!");
-    //        }
-            
-    //    }
-
-    //  public void PasswordLengthandothers(string Password, string UserName)
-    //    {
-          
-          
-    //        bool containsAtLeastOneUppercase = Password.Any(char.IsUpper);
-    //        bool containsAtLeastOneLowercase = Password.Any(char.IsLower);
-    //        string specialChars = "!@#$%^&*()-_+=\\/':,{}[]~.";
-    //        string space = ("  ");
-    //        int minLength = 12;
-          
-
-    //        if (Password.Length < minLength)
-    //        {
-    //            Console.SetCursorPosition(45, 16);
-    //            Console.Write("Password Should have minimum 12 characters!");
-               
-
-    //        }
-    //        else if (containsAtLeastOneLowercase != containsAtLeastOneUppercase)
-    //        {
-    //            Console.SetCursorPosition(45, 16);
-    //           Console.Write("Password should have atleast one Upper and Lower Case Character!");
-               
-    //        }
-    //        else if (!Contains(Password, specialChars))
-    //        {
-    //            Console.SetCursorPosition(45, 16);
-    //            Console.Write("Password should have atleast one Special Character!");
-
-    //        }
-    //        else if (Contains(Password, space))
-    //        {
-    //            Console.SetCursorPosition(45, 16);
-    //            Console.Write("Password should not have any Spaces!");
-
-    //        }
-
-           
-
-    //    }
-
-    //    public bool Contains(string target, string list)
-    //    {
-    //        return target.IndexOfAny(list.ToCharArray()) != -1;
-    //    }
-
-
-
-
-
-
-
-
-
-    //}
 }
+

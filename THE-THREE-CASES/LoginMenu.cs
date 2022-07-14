@@ -21,7 +21,7 @@ namespace THE_THREE_CASES
             Main_menu main = new Main_menu();
             PasswordLogic f = new PasswordLogic();
             PasswordLogic Tjek = new PasswordLogic();
-            int F = 2;
+            var d = f.passwordrequiremnts();
            
  
             bool Continue = false;
@@ -67,6 +67,9 @@ namespace THE_THREE_CASES
                     File.WriteAllText(brugernavnFilepath, user);
                     File.WriteAllText(adgangskodeFilepath, password);
 
+
+                     f.passwordrequiremnts();
+
                    
 
 
@@ -91,59 +94,51 @@ namespace THE_THREE_CASES
                     File.WriteAllText(adgangskodeFilepath, password);
 
 
-             
 
+                    Console.SetCursorPosition(45, 20);
+                    Console.WriteLine("Welcome " + user + " " + "you have created a new account");
+                    Console.Clear();
+
+                    Console.SetCursorPosition(45, 7);
+                    Console.Write("----------Try Logging in with your new Account ----------");
+
+                    Console.SetCursorPosition(45, 10);
+                    Console.Write("User: ");
+                    user = Console.ReadLine();
+
+                    Console.SetCursorPosition(45, 12);
+                    Console.Write("Password: ");
+                    password = Console.ReadLine();
+                    File.WriteAllText(brugernavnFilepath, user);
+                    File.WriteAllText(adgangskodeFilepath, password);
+                    Console.Clear();
+
+
+
+
+                    //Main_menu main = new Main_menu();
                     main.Menu();
 
 
 
 
-                    if (F == 2)
-                    {
-                        Console.SetCursorPosition(45, 20);
-                        Console.WriteLine("Welcome " + user + " " + "you have created a new account");
-                        Console.Clear();
-
-                        Console.SetCursorPosition(45, 7);
-                        Console.Write("----------Try Logging in with your new Account ----------");
-
-                        Console.SetCursorPosition(45, 10);
-                        Console.Write("User: ");
-                        user = Console.ReadLine();
-
-                        Console.SetCursorPosition(45, 12);
-                        Console.Write("Password: ");
-                        password = Console.ReadLine();
-                        File.WriteAllText(brugernavnFilepath, user);
-                        File.WriteAllText(adgangskodeFilepath, password);
-                        Console.Clear();
-
-
-                       
-                      
-                            //Main_menu main = new Main_menu();
-                            //main.Menu();
-                        
-
-                       
-                        
-
-
-                        
 
 
 
 
-                        Console.Clear();
 
 
 
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{f}");
-                    }
+                    Console.Clear();
+
+
                 }
+
+                else
+                {
+                    Console.WriteLine($"{d}");
+                }
+                
 
 
 
