@@ -14,8 +14,8 @@ namespace THE_THREE_CASES
         
         public void RunPasswordMenu()
         {
-            string brugernavnFilepath = @"C:\SkrivBord\Brugernavn.txt"; // Username file path
-            string adgangskodeFilepath = @"C:\SkrivBord\Adgangskode.txt"; // Username file path
+            string brugernavnFilepath = @"C:\data\Brugernavn.txt"; // Username file path
+            string adgangskodeFilepath = @"C:\data\Adgangskode.txt"; // Username file path
 
 
             //PasswordLogic PasswordLogic = new PasswordLogic();
@@ -60,15 +60,16 @@ namespace THE_THREE_CASES
                     Console.SetCursorPosition(45, 10);
                     Console.Write("User: ");
                     string user = Console.ReadLine();
+                    
 
                     Console.SetCursorPosition(45, 12);
                     Console.Write("Password: ");
                     string password = Console.ReadLine();
-                    File.WriteAllText(brugernavnFilepath, user);
-                    File.WriteAllText(adgangskodeFilepath, password);
-
-                    PasswordLengthandothers(password);
+                    //File.WriteAllText(brugernavnFilepath, user);
+                    //File.WriteAllText(adgangskodeFilepath, password);
                     TjekHvisDetAlleredeEksisterer(user);
+                    PasswordLengthandothers(password);
+                    //TjekHvisDetAlleredeEksisterer(user);
                    
                 
 
@@ -183,19 +184,23 @@ namespace THE_THREE_CASES
             Main_menu main = new Main_menu();
 
 
-            string filepath = @"C:\SkrivBord\Brugernavn.txt";
+            string filepath = @"C:\data\Brugernavn.txt";
             string check = File.ReadAllText(filepath);
 
             if (check.Contains(user))
             {
 
-                Console.SetCursorPosition(45, 20);
-                Console.WriteLine("User Exists");
+                Console.SetCursorPosition(45, 16);
+                Console.WriteLine("User Exists!");
                 Console.ReadLine();
                 main.Menu();
             }
+           
             else
             {
+                Console.SetCursorPosition(45, 16);
+                Console.WriteLine("User Doesn't Exists! Try Again or Sign-Up!");
+                Console.ReadLine();
                 RunPasswordMenu();
             }
            
