@@ -67,8 +67,10 @@ namespace THE_THREE_CASES
                     string password = Console.ReadLine();
                     //File.WriteAllText(brugernavnFilepath, user);
                     //File.WriteAllText(adgangskodeFilepath, password);
+                    CheckCaps(user);
                     TjekHvisDetAlleredeEksisterer(user);
                     PasswordLengthandothers(password);
+                    Checkifpasswordexists(password);
                     //TjekHvisDetAlleredeEksisterer(user);
                    
                 
@@ -95,6 +97,10 @@ namespace THE_THREE_CASES
                     Console.SetCursorPosition(45, 12);
                     Console.Write("Password: ");
                     string password = Console.ReadLine();
+
+                    CheckCaps(user);
+                    PasswordLengthandothers(password);
+
                     File.WriteAllText(brugernavnFilepath, user);
                     File.WriteAllText(adgangskodeFilepath, password);
 
@@ -115,11 +121,17 @@ namespace THE_THREE_CASES
                     Console.SetCursorPosition(45, 12);
                     Console.Write("Password: ");
                     password = Console.ReadLine();
-                    File.WriteAllText(brugernavnFilepath, user);
-                    File.WriteAllText(adgangskodeFilepath, password);
 
-                    PasswordLengthandothers(password);
+                    CheckCaps(user);
                     TjekHvisDetAlleredeEksisterer(user);
+                    PasswordLengthandothers(password);
+                    Checkifpasswordexists(password);
+
+
+                    //File.WriteAllText(brugernavnFilepath, user);
+                    //File.WriteAllText(adgangskodeFilepath, password);
+
+
 
 
                     Console.Clear();
@@ -176,12 +188,23 @@ namespace THE_THREE_CASES
             }
         }
 
+        public void CheckCaps(string user)
+        {
+            bool containsUppercase = user.Any(char.IsUpper);
 
+            if (containsUppercase)
+            {
+                Console.SetCursorPosition(45, 16);
+                Console.WriteLine("User Name should not contain any Upper Case Letters!");
+                Console.ReadLine();
+                RunPasswordMenu();
+            }
+        }
         public void TjekHvisDetAlleredeEksisterer(string user)
         {
 
 
-            Main_menu main = new Main_menu();
+           
 
 
             string filepath = @"C:\data\Brugernavn.txt";
@@ -193,7 +216,8 @@ namespace THE_THREE_CASES
                 Console.SetCursorPosition(45, 16);
                 Console.WriteLine("User Exists!");
                 Console.ReadLine();
-                main.Menu();
+               
+             
             }
            
             else
@@ -206,12 +230,38 @@ namespace THE_THREE_CASES
            
             
         }
+        public void Checkifpasswordexists(string password)
+        {
 
+            Main_menu main = new Main_menu();
+
+            string filepath = @"C:\data\adgangskode.txt";
+            string check = File.ReadAllText(filepath);
+
+            if (check.Contains(password))
+            {
+                Console.SetCursorPosition(45, 18);
+                Console.Write("Password Exists!");
+                Console.ReadLine();
+                main.Menu();
+                
+            }
+            else
+            {
+                Console.SetCursorPosition(45, 18);
+                Console.Write("Password Doesn't Exist!");
+                Console.ReadLine();
+                RunPasswordMenu();
+            }
+
+        }
         public void PasswordLengthandothers(string password)
         {
 
 
             Main_menu main = new Main_menu();
+
+
 
             bool containsAtLeastOneUppercase = password.Any(char.IsUpper);
             bool containsAtLeastOneLowercase = password.Any(char.IsLower);
@@ -252,11 +302,7 @@ namespace THE_THREE_CASES
                 RunPasswordMenu();
 
             }
-            else
-            {
-
-                main.Menu();
-            }
+           
 
 
 
