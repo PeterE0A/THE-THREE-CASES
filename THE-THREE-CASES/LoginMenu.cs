@@ -14,8 +14,8 @@ namespace THE_THREE_CASES
         
         public void RunPasswordMenu()
         {
-            string brugernavnFilepath = @"C:\data\Brugernavn.txt"; // Username file path
-            string adgangskodeFilepath = @"C:\data\Adgangskode.txt"; // Username file path
+            string brugernavnFilepath = @"C:Brugernavn.txt"; // Username file path
+            string adgangskodeFilepath = @"C:Adgangskode.txt"; // Username file path
 
 
             //PasswordLogic PasswordLogic = new PasswordLogic();
@@ -207,7 +207,7 @@ namespace THE_THREE_CASES
            
 
 
-            string filepath = @"C:\data\Brugernavn.txt";
+            string filepath = @"C:Brugernavn.txt";
             string check = File.ReadAllText(filepath);
 
             if (check.Contains(user))
@@ -235,7 +235,7 @@ namespace THE_THREE_CASES
 
             Main_menu main = new Main_menu();
 
-            string filepath = @"C:\data\adgangskode.txt";
+            string filepath = @"C:adgangskode.txt";
             string check = File.ReadAllText(filepath);
 
             if (check.Contains(password))
@@ -273,7 +273,7 @@ namespace THE_THREE_CASES
             if (password.Length < minLength)
             {
                 Console.SetCursorPosition(45, 16);
-                Console.Write("Password Should have minimum 12 characters!");
+                Console.Write("Password should have minimum 12 characters!");
                 Console.ReadLine ();
                 RunPasswordMenu();
 
