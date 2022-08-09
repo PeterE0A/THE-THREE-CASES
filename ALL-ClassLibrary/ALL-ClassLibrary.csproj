@@ -43,9 +43,6 @@
   <ItemGroup>
     <Compile Include="DansKonLogic.cs" />
     <Compile Include="FodboldLogic.cs" />
-    <Compile Include="LoginLogic.cs" />
-    <Compile Include="MainMenuLogic.cs" />
-    <Compile Include="PasswordLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

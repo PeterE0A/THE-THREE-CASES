@@ -14,12 +14,7 @@ namespace THE_THREE_CASES
         DanseKon DanseKon = new DanseKon();
 
 
-        //public void MENU()
-        //{
-        //    Menu();
-
-        //    Console.ReadKey();
-        //}
+        
 
         public void Menu()
         {

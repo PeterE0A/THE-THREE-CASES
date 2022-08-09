@@ -14,13 +14,11 @@ namespace THE_THREE_CASES
         public static void Main(string[] args)
         {
 
-            //LoginLogic Login = new LoginLogic();
-            //Login.Login();
+            
 
             LoginMenu LoginMenu = new LoginMenu();
             LoginMenu.RunPasswordMenu();
-            //Main_menu main = new Main_menu();
-            //main.Menu();
+            
             
         }
     }

@@ -18,7 +18,6 @@ namespace THE_THREE_CASES
             string adgangskodeFilepath = @"C:Adgangskode.txt"; // Username file path
 
 
-            //PasswordLogic PasswordLogic = new PasswordLogic();
             Main_menu main = new Main_menu();
 
 
@@ -65,16 +64,13 @@ namespace THE_THREE_CASES
                     Console.SetCursorPosition(45, 12);
                     Console.Write("Password: ");
                     string password = Console.ReadLine();
-                    //File.WriteAllText(brugernavnFilepath, user);
-                    //File.WriteAllText(adgangskodeFilepath, password);
+                    
                     CheckCaps(user);
                     TjekHvisDetAlleredeEksisterer(user);
                     PasswordLengthandothers(password);
                     Checkifpasswordexists(password);
-                    //TjekHvisDetAlleredeEksisterer(user);
-                   
-                
-
+               
+                             
                     Console.ReadLine();
                      
 
@@ -128,62 +124,13 @@ namespace THE_THREE_CASES
                     Checkifpasswordexists(password);
 
 
-                    //File.WriteAllText(brugernavnFilepath, user);
-                    //File.WriteAllText(adgangskodeFilepath, password);
-
-
-
-
                     Console.Clear();
-
-
-
-
-                    ////Main_menu main = new Main_menu();
-                    //main.Menu();
-
-
-
-
-
-
-
-
-
-
-
-                   
-
+                    
 
                 }
 
-                else
-                {
-                    //Console.WriteLine($"{d}");
-                }
-                
-
-
-
-
-
-
-                //File.WriteAllText(filepath, user + "     " + password);
-
-
-
-                //Password.PasswordRequiremnts(password);
-
-                //if (asldklsad)
-                //{
-                //    Continue = true;
-
-
-                //    File.ReadAllText(filepath);
-
-                //}
-
-
+               
+              
                 Console.ReadKey();
             }
         }
