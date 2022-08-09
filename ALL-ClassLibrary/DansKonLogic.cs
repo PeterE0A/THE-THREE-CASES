@@ -11,18 +11,28 @@ namespace ALL_ClassLibrary
         public string Name;
         public int Score;
 
+        //NAME Metode til at hente navn
+
         public void NAME(string name)
         {
             this.Name = name;
         }
+
+        //SetNAME Metode til at returnere navn
         public string SetNAME()
         {
             return this.Name;
         }
+
+        //SCORE Metode til at hente score
+
         public void SCORE(int score)
         {
             this.Score = score;
         }
+
+        //SetSCORE Metode til at returnere score
+
         public int SetSCORE()
         {
             return this.Score;

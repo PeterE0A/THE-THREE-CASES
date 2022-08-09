@@ -14,7 +14,7 @@ namespace THE_THREE_CASES
         public static void Main(string[] args)
         {
 
-            
+            //Metode, der fører dig til login/tilmeldingssiden
 
             LoginMenu LoginMenu = new LoginMenu();
             LoginMenu.RunPasswordMenu();
