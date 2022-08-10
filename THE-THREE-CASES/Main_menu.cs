@@ -13,8 +13,8 @@ namespace THE_THREE_CASES
 
         //objekter
 
-        Fodbold Fodbold = new Fodbold();    
-        DanseKon DanseKon = new DanseKon();
+            Fodbold Fodbold = new Fodbold();    
+            DanseKon DanseKon = new DanseKon();
 
 
         //metode til hovedmenuen

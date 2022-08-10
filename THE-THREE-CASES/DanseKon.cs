@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ALL_ClassLibrary;
 
+
 namespace THE_THREE_CASES
 {
     public class DanseKon
@@ -13,14 +14,15 @@ namespace THE_THREE_CASES
         //DANSE Metode
         public void DANSE()
         {
-            int b = 3;
+
+
+                Main_menu main = new Main_menu();
+        
 
             //while-løkke for at starte danseprogrammet igen, når du er færdig med at bruge det
 
-            while (b == 3)
-            {
 
-                //tilføjer baggrund og skriftfarve for at få det til at se pænere ud
+            //tilføjer baggrund og skriftfarve for at få det til at se pænere ud
 
                 Console.BackgroundColor = ConsoleColor.Cyan;
                 Console.ForegroundColor = ConsoleColor.Black;
@@ -74,13 +76,16 @@ namespace THE_THREE_CASES
                 Console.SetCursorPosition(45, 10);
                 Console.Write(danser1.SetNAME() + " " + "& " + danser2.SetNAME() + " " + (danser1.SetSCORE() + danser2.SetSCORE()));
 
+                Console.ReadKey();
 
+
+                main.Menu();
 
 
 
 
                 Console.ReadKey();
-            }
+            
 
         }
     }

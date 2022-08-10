@@ -47,6 +47,7 @@ namespace THE_THREE_CASES
 
                 Console.SetCursorPosition(45, 10);
                 Console.Write("Choose by Typing 1 or 2:");
+
                 Console.SetCursorPosition(45, 12);
                 Console.Write("1. Login");
 

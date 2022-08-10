@@ -14,15 +14,14 @@ namespace THE_THREE_CASES
         public void FODBOLD()
         {
             {
-                int b = 2;
+                
 
-                FodboldLogic FodboldLogic = new FodboldLogic();
+                    FodboldLogic FodboldLogic = new FodboldLogic();
+                    Main_menu main = new Main_menu();
 
                 //while-løkke for at starte fodboldprogrammet igen, når du er færdig med at bruge det
 
-                while (b == 2)
-                {
-
+                
                     //tilføjer baggrund og skriftfarve for at få det til at se pænere ud
 
                     Console.BackgroundColor = ConsoleColor.Cyan;
@@ -39,51 +38,31 @@ namespace THE_THREE_CASES
                     Console.SetCursorPosition(45, 10);
                     Console.Write("MÅL: ");
                     int mål = Convert.ToInt32(Console.ReadLine());
+              
 
-                    //indtast hvor mange afleveringer
+                //indtast hvor mange afleveringer
 
-                    Console.SetCursorPosition(45, 12);
+                Console.SetCursorPosition(45, 12);
                     Console.Write("afleveringer: ");
                     int afleveringer = Convert.ToInt32(Console.ReadLine());
+                    
 
                     Console.SetCursorPosition(45, 14);
 
                     //hvis afleveringer er 10 vil den kalde HighFive-metoden
 
-                    if (afleveringer == 10)
-                    {
+                   
 
-                        FodboldLogic.HighFIVE();
-                    }
-
-                    //hvis mål er 1 vil det kalde OLE-metoden
-
-                    else if (mål == 1)
-                    {
-                        FodboldLogic.OLE();
-                    }
-
-                    //hvis afleveringer er 0 vil den kalde SHH-metoden
-
-                    else if (afleveringer == 0)
-                    {
-                        FodboldLogic.SHH();
-                    }
-
-                    //hvis afleveringer er mindre end eller lig med 10 vil den kalde huh-metoden
-
-                    else if (afleveringer <= 10)
-                    {
-                        FodboldLogic.huh();
-
-                    }
-
-
+                    Console.WriteLine(FodboldLogic.HowMuchDoWeCheer(afleveringer, mål));
+              
+                Console.ReadKey();
+          
+               
                     Console.Clear();
 
-                }
+                    main.Menu();
 
-                Console.ReadKey();
+                    Console.ReadKey();
             }
 
         }

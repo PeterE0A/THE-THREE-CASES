@@ -13,9 +13,13 @@ namespace ALL_ClassLibrary
 
         //NAME Metode til at hente navn
 
+
+
+
         public void NAME(string name)
         {
             this.Name = name;
+
         }
 
         //SetNAME Metode til at returnere navn
