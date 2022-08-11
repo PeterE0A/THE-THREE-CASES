@@ -37,8 +37,9 @@ namespace THE_THREE_CASES
 
                     Console.SetCursorPosition(45, 10);
                     Console.Write("MÅL: ");
-                    int mål = Convert.ToInt32(Console.ReadLine());
-              
+                    string mål = Convert.ToString(Console.ReadLine());
+                
+
 
                 //indtast hvor mange afleveringer
 
@@ -49,12 +50,20 @@ namespace THE_THREE_CASES
 
                     Console.SetCursorPosition(45, 14);
 
-                    //hvis afleveringer er 10 vil den kalde HighFive-metoden
+                //hvis afleveringer er 10 vil den kalde HighFive-metoden
 
-                   
 
-                    Console.WriteLine(FodboldLogic.HowMuchDoWeCheer(afleveringer, mål));
-              
+                Console.WriteLine(FodboldLogic.mÅL(mål, afleveringer));
+
+       
+
+
+
+                
+
+               
+
+
                 Console.ReadKey();
           
                

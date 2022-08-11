@@ -10,7 +10,8 @@ namespace ALL_ClassLibrary
     {
         public string afleveringerT;
 
-        public string HowMuchDoWeCheer(int afleveringer, int mål)
+       
+        public string HowMuchDoWeCheer(int afleveringer)
         {
 
 
@@ -20,7 +21,7 @@ namespace ALL_ClassLibrary
                 return "High Five – Jubel!!!";
 
             }
-            else if (afleveringer < 1 && mål == 0)
+            else if (afleveringer < 1)
             {
                 return "Shh";
 
@@ -28,11 +29,11 @@ namespace ALL_ClassLibrary
 
             //should be in another method
 
-            else if (mål == 1)
-            {
-                return "Olé olé olé";
+           // else if (mål == 1)
+           // {
+               // return "Olé olé olé";
 
-            }
+           // }
             //----------------------------------------
             else
             {
@@ -43,6 +44,35 @@ namespace ALL_ClassLibrary
 
 
         }
+
+        public string mÅL(string mål, int afleveringer)
+
+        {
+            bool OneUppercase = mål.Any(char.IsUpper);
+            bool OneLowercase = mål.Any(char.IsLower);
+
+
+            //mål == "mål" || mål == "MÅL" || mål == "Mål" || mål == "MÅl" || mål == "mÅL" || mål == "måL" || mål == "MåL" || mål == "mÅl"
+
+            if (OneUppercase && OneLowercase || OneLowercase != OneUppercase)
+            {
+
+                return "Olé olé olé";
+
+            }
+            else
+            {
+                return HowMuchDoWeCheer(afleveringer);
+            }          
+           
+        }
+
+      
+
+       
+       
+
+
 
         //public void Mål(string mål)
         //{
