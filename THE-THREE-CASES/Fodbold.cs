@@ -19,8 +19,6 @@ namespace THE_THREE_CASES
                     FodboldLogic FodboldLogic = new FodboldLogic();
                     Main_menu main = new Main_menu();
 
-                //while-løkke for at starte fodboldprogrammet igen, når du er færdig med at bruge det
-
                 
                     //tilføjer baggrund og skriftfarve for at få det til at se pænere ud
 
@@ -41,33 +39,25 @@ namespace THE_THREE_CASES
                 
 
 
-                //indtast hvor mange afleveringer
+                    //indtast hvor mange afleveringer
 
-                Console.SetCursorPosition(45, 12);
+                    Console.SetCursorPosition(45, 12);
                     Console.Write("afleveringer: ");
                     int afleveringer = Convert.ToInt32(Console.ReadLine());
                     
 
                     Console.SetCursorPosition(45, 14);
 
-                //hvis afleveringer er 10 vil den kalde HighFive-metoden
+                    //metode, der kontrollerer, hvad der er indtastet og giver specifikt output baseret på hvad der blev indtastet
 
 
-                Console.WriteLine(FodboldLogic.mÅL(mål, afleveringer));
+                    Console.WriteLine(FodboldLogic.mÅL(mål, afleveringer));
 
-       
-
-
-
-                
-
-               
-
-
-                Console.ReadKey();
+                    Console.ReadKey();
           
-               
                     Console.Clear();
+
+                    //går til hovedmenuen
 
                     main.Menu();
 

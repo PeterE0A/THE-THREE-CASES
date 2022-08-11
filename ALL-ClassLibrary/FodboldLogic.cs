@@ -10,7 +10,8 @@ namespace ALL_ClassLibrary
     {
         public string afleveringerT;
 
-       
+        //metode til at se, hvad der skal jubles baseret på, hvilket input der er indtastet
+
         public string HowMuchDoWeCheer(int afleveringer)
         {
 
@@ -27,14 +28,6 @@ namespace ALL_ClassLibrary
 
             }
 
-            //should be in another method
-
-           // else if (mål == 1)
-           // {
-               // return "Olé olé olé";
-
-           // }
-            //----------------------------------------
             else
             {
                 for (int i = 0; i < afleveringer; i++) afleveringerT += "Huh! ";
@@ -45,14 +38,13 @@ namespace ALL_ClassLibrary
 
         }
 
+        //metode til, hvad der skal jubles, når der scores et mål
         public string mÅL(string mål, int afleveringer)
 
         {
             bool OneUppercase = mål.Any(char.IsUpper);
             bool OneLowercase = mål.Any(char.IsLower);
 
-
-            //mål == "mål" || mål == "MÅL" || mål == "Mål" || mål == "MÅl" || mål == "mÅL" || mål == "måL" || mål == "MåL" || mål == "mÅl"
 
             if (OneUppercase && OneLowercase || OneLowercase != OneUppercase)
             {
@@ -66,110 +58,6 @@ namespace ALL_ClassLibrary
             }          
            
         }
-
-      
-
-       
-       
-
-
-
-        //public void Mål(string mål)
-        //{
-        //    bool Uppercase = mål.Any(char.IsUpper);
-        //    bool Lowercase = mål.Any(char.IsLower);
-
-        //    if (Uppercase == Lowercase)
-        //    {
-        //        Console.WriteLine("Olé olé olé");
-        //    }
-        //    else
-        //    {
-        //        Console.Clear();
-        //    }
-        //}
-
-
-
-
-
-
-
-
-
-
-
-
-
-        ////HighFIVE Metode
-        //public void HighFIVE()
-        //{
-        //    //hvis afleveringer er 10 vil den skrive "High Five – Jubel!!!"
-
-
-        //        Console.Write("High Five – Jubel!!!");
-        //        Console.ReadLine();
-        //        Console.Clear();
-        //}
-
-        ////huh Metode
-        //public void huh()
-        //{
-        //    int afleveringer = 10;
-
-        //    //hvis afleveringer er mindre end eller lig med 10 vil den skrive "Huh!"
-
-        //    if (afleveringer <= 10)
-        //    {
-        //        Console.Write("Huh!");
-        //        Console.ReadLine();
-        //        Console.Clear();
-        //    }
-        //}
-
-
-        ////OLE Metode
-        //public void OLE()
-        //{
-        //    int mål = 1;
-
-        //    //hvis mål er 1 vil den skrive "Olé olé olé"
-
-        //    if (mål == 1)
-        //    {
-        //        Console.Write("Olé olé olé");
-        //        Console.ReadLine();
-        //        Console.Clear();
-        //    }
-
-
-        //}
-
-
-        ////SHH Metode
-
-        //public void SHH()
-        //{
-        //    int afleveringer = 0;
-
-        //    //hvis afleveringer er 0 vil den skrive "Shh"
-
-        //    if (afleveringer == 0)
-        //    {
-        //        Console.Write("Shh");
-        //        Console.ReadLine();
-        //        Console.Clear();
-        //    }
-
-
-        //}
-
-
-
-
-
-
-
 
     }
 

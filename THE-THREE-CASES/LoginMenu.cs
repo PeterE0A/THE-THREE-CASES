@@ -262,15 +262,15 @@ namespace THE_THREE_CASES
         {
 
 
-            Main_menu main = new Main_menu();
+                Main_menu main = new Main_menu();
 
             //booleaner, strenge og heltal
 
-            bool containsAtLeastOneUppercase = password.Any(char.IsUpper);
-            bool containsAtLeastOneLowercase = password.Any(char.IsLower);
-            string specialChars = "!@#$%^&*()-_+=\\/':,{}[]~.";
-            string space = ("  ");
-            int minLength = 12;
+                bool containsAtLeastOneUppercase = password.Any(char.IsUpper);
+                bool containsAtLeastOneLowercase = password.Any(char.IsLower);
+                string specialChars = "!@#$%^&*()-_+=\\/':,{}[]~.";
+                string space = ("  ");
+                int minLength = 12;
 
 
             //hvis adgangskodelængden er mindre end 12 tegn, vil den skrive "adgangskoden skal have minimum 12 tegn" og vender tilbage til login/tilmeldingssiden
@@ -284,7 +284,7 @@ namespace THE_THREE_CASES
 
             }
 
-            //hvis små bogstaver ikke er lig med store bogstaver vil den skrive "adgangskode skal have mindst et ​​stort og et lille bogstav og vender tilbage til login/tilmeldingssiden
+            //hvis adgangskoden ikke har et lille eller stort bogstav vil den skrive "adgangskode skal have mindst et ​​stort og et lille bogstav og vender tilbage til login/tilmeldingssiden
 
             else if (containsAtLeastOneLowercase != containsAtLeastOneUppercase)
             {
@@ -327,7 +327,7 @@ namespace THE_THREE_CASES
         public bool Contains(string target, string list)
         {
             return target.IndexOfAny(list.ToCharArray()) != -1;
-        }
+        }   
 
     }
 }

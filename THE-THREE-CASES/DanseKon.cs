@@ -17,9 +17,7 @@ namespace THE_THREE_CASES
 
 
                 Main_menu main = new Main_menu();
-        
-
-            //while-løkke for at starte danseprogrammet igen, når du er færdig med at bruge det
+       
 
 
             //tilføjer baggrund og skriftfarve for at få det til at se pænere ud
