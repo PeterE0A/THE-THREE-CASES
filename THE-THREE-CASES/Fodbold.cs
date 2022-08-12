@@ -31,11 +31,11 @@ namespace THE_THREE_CASES
                     Console.SetCursorPosition(45, 7);
                     Console.Write("---------- Fodbold ----------");
 
-                    //indtast hvor mange mål
+                    //indtast om det er mål
 
                     Console.SetCursorPosition(45, 10);
                     Console.Write("MÅL: ");
-                    string mål = Convert.ToString(Console.ReadLine());
+                    string mål = Console.ReadLine();
                 
 
 
@@ -51,6 +51,7 @@ namespace THE_THREE_CASES
                     //metode, der kontrollerer, hvad der er indtastet og giver specifikt output baseret på hvad der blev indtastet
 
 
+                    
                     Console.WriteLine(FodboldLogic.mÅL(mål, afleveringer));
 
                     Console.ReadKey();

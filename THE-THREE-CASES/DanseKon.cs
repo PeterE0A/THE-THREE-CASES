@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ALL_ClassLibrary;
+using THE_THREE_CASES;
 
 
 namespace THE_THREE_CASES
@@ -16,74 +17,80 @@ namespace THE_THREE_CASES
         {
 
 
-                Main_menu main = new Main_menu();
-       
+            Main_menu main = new Main_menu();
+            DansKonLogic danser1 = new DansKonLogic();
+            DansKonLogic danser2 = new DansKonLogic();
 
+
+
+        
 
             //tilføjer baggrund og skriftfarve for at få det til at se pænere ud
 
-                Console.BackgroundColor = ConsoleColor.Cyan;
-                Console.ForegroundColor = ConsoleColor.Black;
-                Console.Clear();
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Clear();
 
-                //titel
+            //titel
 
-                Console.SetCursorPosition(45, 7);
-                Console.Write("---------- DanseKonkurrence ----------");
-
-
-                DansKonLogic danser1 = new DansKonLogic();
-
-                //indtast danserens navn
-
-                Console.SetCursorPosition(45, 10);
-                Console.Write("First Dancer: ");
-                danser1.NAME(Console.ReadLine());
-
-                //indtast danserens score
-
-                Console.SetCursorPosition(45, 12);
-                Console.Write("Score: ");
-                danser1.SCORE(Convert.ToInt32(Console.ReadLine()));
+            Console.SetCursorPosition(45, 7);
+            Console.Write("---------- DanseKonkurrence ----------");
 
 
-                DansKonLogic danser2 = new DansKonLogic();
+          
+            //indtast danserens navn
 
-                //indtast danserens navn
+            Console.SetCursorPosition(45, 10);
+            Console.Write("First Dancer: ");
+            danser1.NAME(Console.ReadLine());
 
-                Console.SetCursorPosition(45, 14);
-                Console.Write("Second Dancer: ");
-                danser2.NAME(Console.ReadLine());
+            //indtast danserens score
 
-                //indtast danserens score
-
-
-                Console.SetCursorPosition(45, 16);
-                Console.Write("Score: ");
-                danser2.SCORE(Convert.ToInt32(Console.ReadLine()));
-
-                Console.Clear();
-
-                //titel
-
-                Console.SetCursorPosition(45, 7);
-                Console.Write("---------- DanseKonkurrence ----------");
-
-                //første danser og anden danser med deres score (samlede)
-
-                Console.SetCursorPosition(45, 10);
-                Console.Write(danser1.SetNAME() + " " + "& " + danser2.SetNAME() + " " + (danser1.SetSCORE() + danser2.SetSCORE()));
-
-                Console.ReadKey();
+            Console.SetCursorPosition(45, 12);
+            Console.Write("Score: ");
+            danser1.SCORE(Convert.ToInt32(Console.ReadLine()));
 
 
-                main.Menu();
+         
+
+            //indtast danserens navn
+
+            Console.SetCursorPosition(45, 14);
+            Console.Write("Second Dancer: ");
+            danser2.NAME(Console.ReadLine());
+
+            //indtast danserens score
+
+
+            Console.SetCursorPosition(45, 16);
+            Console.Write("Score: ");
+            danser2.SCORE(Convert.ToInt32(Console.ReadLine()));
+
+            Console.Clear();
+
+            //titel
+
+            Console.SetCursorPosition(45, 7);
+            Console.Write("---------- DanseKonkurrence ----------");
+
+            //første danser og anden danser med deres score (samlede)
+
+            Console.SetCursorPosition(45, 10);
+            //Console.Write(danser1.SetNAME() + " " + "& " + danser2.SetNAME() + " " + (danser1.SetSCORE() + danser2.SetSCORE()));
+
+
+            //Console.WriteLine(Object.name + object.score);
+
+            Console.ReadKey();
+
+
+            main.Menu();
 
 
 
 
-                Console.ReadKey();
-            
+            Console.ReadKey();
+
 
         }
     }

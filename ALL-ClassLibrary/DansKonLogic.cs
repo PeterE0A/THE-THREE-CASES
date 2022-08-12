@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ALL_ClassLibrary
 {
     public class DansKonLogic
@@ -11,8 +12,11 @@ namespace ALL_ClassLibrary
         public string Name;
         public int Score;
 
+
+
         //NAME Metode til at hente navn
 
+       
 
 
 
@@ -42,35 +46,54 @@ namespace ALL_ClassLibrary
             return this.Score;
         }
 
-        public override bool Equals(object obj)
-        {
-            return Equals(obj as DansKonLogic);
-        }
 
-        public bool Equals(DansKonLogic other)
-        {
-            return other != null &&
-                   Name == other.Name &&
-                   Score == other.Score;
-        }
 
-        public override int GetHashCode()
-        {
-            int hashCode = -1744016341;
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
-            hashCode = hashCode * -1521134295 + Score.GetHashCode();
-            return hashCode;
-        }
+       
 
-        public static bool operator == (DansKonLogic left, DansKonLogic right)
-        {
-            return EqualityComparer<DansKonLogic>.Default.Equals(left, right);
-        }
+        
 
-        public static bool operator !=(DansKonLogic left,DansKonLogic right)
-        {
-            return !(left == right);
-        }
+
+
+        //public static DansKonLogic operator +(DansKonLogic danser1, DansKonLogic danser2)
+        //{
+
+        //    return danser1 + danser2;
+        //}
+
+
+
+
+        //public override bool Equals(object obj)
+        //{
+        //    return Equals(obj as DansKonLogic);
+        //}
+
+        //public bool Equals(DansKonLogic other)
+        //{
+        //    return other != null &&
+        //           Name == other.Name &&
+        //           Score == other.Score;
+        //}
+
+        //public override int GetHashCode()
+        //{
+        //    int hashCode = -1744016341;
+        //    hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
+        //    hashCode = hashCode * -1521134295 + Score.GetHashCode();
+        //    return hashCode;
+        //}
+
+        //public static bool operator == (DansKonLogic left, DansKonLogic right)
+        //{
+        //    return EqualityComparer<DansKonLogic>.Default.Equals(left, right);
+        //}
+
+        //public static bool operator !=(DansKonLogic left,DansKonLogic right)
+        //{
+        //    return !(left == right);
+        //}
+
 
     }
+   
 }

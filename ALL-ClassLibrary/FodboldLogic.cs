@@ -9,6 +9,7 @@ namespace ALL_ClassLibrary
     public class FodboldLogic
     {
         public string afleveringerT;
+       
 
         //metode til at se, hvad der skal jubles baseret på, hvilket input der er indtastet
 
@@ -40,23 +41,18 @@ namespace ALL_ClassLibrary
 
         //metode til, hvad der skal jubles, når der scores et mål
         public string mÅL(string mål, int afleveringer)
-
         {
-            bool OneUppercase = mål.Any(char.IsUpper);
-            bool OneLowercase = mål.Any(char.IsLower);
 
-
-            if (OneUppercase && OneLowercase || OneLowercase != OneUppercase)
+           
+            if (mål.ToLower() == "mål")
             {
-
                 return "Olé olé olé";
-
             }
             else
             {
                 return HowMuchDoWeCheer(afleveringer);
             }          
-           
+          
         }
 
     }
