@@ -12,6 +12,18 @@ namespace ALL_ClassLibrary
         public string Name;
         public int Score;
 
+      public DansKonLogic(int Score)
+        {
+            this.Score = Score;
+           
+
+        }
+        
+        public static DansKonLogic operator +(DansKonLogic score1, DansKonLogic score2)
+        {
+            DansKonLogic finalresult = new DansKonLogic(score1.Score + score2.Score);
+            return finalresult;
+        }
 
 
         //NAME Metode til at hente navn
@@ -34,23 +46,23 @@ namespace ALL_ClassLibrary
 
         //SCORE Metode til at hente score
 
-        public void SCORE(int score)
-        {
-            this.Score = score;
-        }
+        //public void SCORE(int score)
+        //{
+        //    this.Score = score;
+        //}
 
-        //SetSCORE Metode til at returnere score
+        ////SetSCORE Metode til at returnere score
 
-        public int SetSCORE()
-        {
-            return this.Score;
-        }
+        //public int SetSCORE()
+        //{
+        //    return this.Score;
+        //}
 
 
 
-       
 
-        
+
+
 
 
 
