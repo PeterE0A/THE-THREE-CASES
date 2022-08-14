@@ -15,18 +15,14 @@ namespace THE_THREE_CASES
         //DANSE Metode
         public void DANSE()
         {
-
+            
 
             Main_menu main = new Main_menu();
             //DansKonLogic danser1 = new DansKonLogic();
             //DansKonLogic danser2 = new DansKonLogic();
-            DansKonLogic score1 = new DansKonLogic();
-            DansKonLogic score2 = new DansKonLogic();
-            DansKonLogic finalresult = score1 + score2;       
-
-
-
-                   
+            
+         
+           
 
             //tilføjer baggrund og skriftfarve for at få det til at se pænere ud
 
@@ -46,14 +42,16 @@ namespace THE_THREE_CASES
             Console.SetCursorPosition(45, 10);
             Console.Write("First Dancer: ");
             //danser1.NAME(Console.ReadLine());
+            string name1 = Console.ReadLine();
 
             //indtast danserens score
 
             Console.SetCursorPosition(45, 12);
             Console.Write("Score: ");
             //danser1.SCORE(Convert.ToInt32(Console.ReadLine()));
-            
-            
+            int points1 = Convert.ToInt32(Console.ReadLine());
+
+            DansKonLogic dancer1 = new DansKonLogic(name1, points1);
 
 
             //indtast danserens navn
@@ -61,6 +59,7 @@ namespace THE_THREE_CASES
             Console.SetCursorPosition(45, 14);
             Console.Write("Second Dancer: ");
             //danser2.NAME(Console.ReadLine());
+            string name2 = Console.ReadLine();
 
             //indtast danserens score
 
@@ -68,6 +67,10 @@ namespace THE_THREE_CASES
             Console.SetCursorPosition(45, 16);
             Console.Write("Score: ");
             //danser2.SCORE(Convert.ToInt32(Console.ReadLine()));
+            int points2 = Convert.ToInt32(Console.ReadLine());
+
+            DansKonLogic dancer2 = new DansKonLogic(name2, points2);
+
 
             Console.Clear();
 
@@ -80,8 +83,9 @@ namespace THE_THREE_CASES
 
             Console.SetCursorPosition(45, 10);
             //Console.Write(danser1.SetNAME() + " " + "& " + danser2.SetNAME() + " " + (danser1.SetSCORE() + danser2.SetSCORE()));
-            
-           
+            DansKonLogic total = dancer1 + dancer2;
+            Console.WriteLine(total.name + " " + total.points);
+
             //Console.WriteLine(Object.name + object.score);
 
             Console.ReadKey();

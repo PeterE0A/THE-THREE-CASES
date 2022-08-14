@@ -9,40 +9,47 @@ namespace ALL_ClassLibrary
 {
     public class DansKonLogic
     {
-        public string Name;
-        public int Score;
 
-      public DansKonLogic(int Score)
-        {
-            this.Score = Score;
-           
+        public string name;
+        public int points;
 
-        }
-        
-        public static DansKonLogic operator +(DansKonLogic score1, DansKonLogic score2)
+        public DansKonLogic(string name, int points)
         {
-            DansKonLogic finalresult = new DansKonLogic(score1.Score + score2.Score);
-            return finalresult;
+            this.name = name;
+            this.points = points;
         }
+
+        //overload the + operator
+        public static DansKonLogic operator +(DansKonLogic a, DansKonLogic b)
+        {
+            string n = a.name + " & " + b.name;
+            int p = a.points + b.points;
+            DansKonLogic result = new DansKonLogic(n, p);
+            return result;
+        }
+
+
+
+
 
 
         //NAME Metode til at hente navn
 
-       
 
 
 
-        public void NAME(string name)
-        {
-            this.Name = name;
 
-        }
+        //public void NAME(string name)
+        //{
+        //    this.Name = name;
+
+        //}
 
         //SetNAME Metode til at returnere navn
-        public string SetNAME()
-        {
-            return this.Name;
-        }
+        //public string SetNAME()
+        //{
+        //    return this.Name;
+        //}
 
         //SCORE Metode til at hente score
 
