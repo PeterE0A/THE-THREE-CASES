@@ -37,14 +37,14 @@ namespace THE_THREE_CASES
 
 
           
-            //indtast danserens navn
+            //indtast danserens 1 navn
 
             Console.SetCursorPosition(45, 10);
             Console.Write("First Dancer: ");
             //danser1.NAME(Console.ReadLine());
             string name1 = Console.ReadLine();
 
-            //indtast danserens score
+            //indtast danserens 1 score
 
             Console.SetCursorPosition(45, 12);
             Console.Write("Score: ");
@@ -54,14 +54,14 @@ namespace THE_THREE_CASES
             DansKonLogic dancer1 = new DansKonLogic(name1, points1);
 
 
-            //indtast danserens navn
+            //indtast danserens 2 navn
 
             Console.SetCursorPosition(45, 14);
             Console.Write("Second Dancer: ");
             //danser2.NAME(Console.ReadLine());
             string name2 = Console.ReadLine();
 
-            //indtast danserens score
+            //indtast danserens 2 score
 
 
             Console.SetCursorPosition(45, 16);

@@ -13,6 +13,7 @@ namespace ALL_ClassLibrary
         public string name;
         public int points;
 
+        //constructor
         public DansKonLogic(string name, int points)
         {
             this.name = name;
