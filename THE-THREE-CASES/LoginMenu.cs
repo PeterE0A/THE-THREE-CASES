@@ -271,6 +271,7 @@ namespace THE_THREE_CASES
                 string specialChars = "!@#$%^&*()-_+=\\/':,{}[]~.";
                 string space = ("  ");
                 int minLength = 12;
+                
 
 
             //hvis adgangskodelængden er mindre end 12 tegn, vil den skrive "adgangskoden skal have minimum 12 tegn" og vender tilbage til login/tilmeldingssiden
@@ -279,7 +280,7 @@ namespace THE_THREE_CASES
             {
                 Console.SetCursorPosition(45, 16);
                 Console.Write("Password should have minimum 12 characters!");
-                Console.ReadLine ();
+                Console.ReadLine();
                 RunPasswordMenu();
 
             }
@@ -316,11 +317,35 @@ namespace THE_THREE_CASES
                 RunPasswordMenu();
 
             }
+
+            //hvis adgangskoden indeholder et tal i slutningen af ​​det, vil det skrive "adgangskoden bør ikke indeholde et tal i slutningen af ​​det"
+
+            else if (password.Substring(password.Length - 1).Any(char.IsDigit))
+            {
+                Console.SetCursorPosition(45, 16);
+                Console.Write("Password should not contain a number at the end of it!");
+                Console.ReadLine();
+                RunPasswordMenu();
+            }
+
+            //hvis adgangskoden har et nummer i starten vil den skrive "adgangskoden bør ikke indeholde et nummer i starten af ​​den"
+
+            else if (password.Substring(0, 1).Any(char.IsDigit))
+            {
+                Console.SetCursorPosition(45, 16);
+                Console.Write("Password should not contian a number at the start of it!");
+                Console.ReadLine();
+                RunPasswordMenu();
+            }
            
 
 
 
         }
+
+
+
+
 
         //metode til at kontrollere, om specifikke ting indeholder det, den skal indeholde
 
